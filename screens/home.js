@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import MovieSection from "../components/movieSection";
 import { ScrollView } from "react-native-gesture-handler";
+import Carousel from "../components/carousel";
 
 function HomeScreen({ navigation }) {
   const [loading, setLoading] = React.useState(false);
@@ -53,6 +54,7 @@ function HomeScreen({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
+        <Carousel data={data} onPress={handlePress}></Carousel>
         <MovieSection
           onPress={handlePress}
           data={data}
