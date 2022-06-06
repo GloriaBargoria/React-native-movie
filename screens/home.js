@@ -15,7 +15,11 @@ function HomeScreen({ navigation }) {
   const [error, setError] = React.useState(null);
   const [data, setData] = React.useState([]);
 
-  const handlePress = ({ title, id }) => {};
+  const handlePress = ({ title, id }) =>
+    navigation.navigate("Movie", {
+      id,
+      title,
+    });
 
   useEffect(() => {
     setLoading(true);
