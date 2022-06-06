@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { API_BASE_URL } from "@env";
 import { SafeAreaView } from "react-native";
 import { SearchBar } from "react-native-elements";
+import MovieList from "../components/movieList";
 
 function SearchScreen({ navigation }) {
   const [searchValue, setSearchValue] = useState("");
@@ -54,6 +55,13 @@ function SearchScreen({ navigation }) {
         onChangeText={handleSearch}
         value={searchValue}
       />
+      <MovieList
+        onPress={handlePress}
+        loading={loading}
+        error={error}
+        data={data}
+        search={searchValue}
+      ></MovieList>
     </SafeAreaView>
   );
 }
