@@ -36,3 +36,15 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+// {{
+//   tabBarActiveTintColor: "tomato",
+//   tabBarInactiveTintColor: "gray",
+//   tabBarLabelPosition: "below-icon",
+//   tabBarStyle: [
+//     {
+//       "display": "flex"
+//     },
+//     null
+//   ]
+// }}
