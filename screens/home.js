@@ -28,7 +28,7 @@ function HomeScreen({ navigation }) {
       .then((response) => response.json())
       .then((data = []) => {
         if (!data.length) {
-          setError("No movies available");
+          setError("No destinations available");
           return setLoading(false);
         }
 
@@ -39,7 +39,7 @@ function HomeScreen({ navigation }) {
       })
       .catch((e) => {
         setLoading(false);
-        setError("Fetching movies failed");
+        setError("Fetching destinations failed");
       });
   }, []);
 
@@ -58,12 +58,12 @@ function HomeScreen({ navigation }) {
         <MovieSection
           onPress={handlePress}
           data={data}
-          title="Latest movies"
+          title="Latest destinations"
         ></MovieSection>
         <MovieSection
           onPress={handlePress}
           data={data}
-          title="Top rated movies"
+          title="Top rated destinations"
         ></MovieSection>
       </ScrollView>
     </SafeAreaView>

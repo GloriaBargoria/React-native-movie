@@ -29,7 +29,7 @@ function SearchScreen({ navigation }) {
       .then((response) => response.json())
       .then((data = []) => {
         if (!data.length) {
-          setError("No movies available");
+          setError("No destinations available");
           return setLoading(false);
         }
 
@@ -39,7 +39,7 @@ function SearchScreen({ navigation }) {
       })
       .catch((e) => {
         setLoading(false);
-        setError("Fetching movies failed");
+        setError("Fetching destinations failed");
       });
     setSearchValue(value);
   };
@@ -51,7 +51,7 @@ function SearchScreen({ navigation }) {
         inputStyle={{ backgroundColor: "white" }}
         inputContainerStyle={{ backgroundColor: "white" }}
         containerStyle={{ backgroundColor: "white" }}
-        placeholder="Type Here..."
+        placeholder="Search Here..."
         onChangeText={handleSearch}
         value={searchValue}
       />

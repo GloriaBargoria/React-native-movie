@@ -16,7 +16,7 @@ function HomeTab() {
           component={HomeScreen}
         />
         <Stack.Screen
-          name="Movie"
+          name="Destination"
           component={MovieScreen}
           options={({ route }) => ({ title: route.params.title })}
         />

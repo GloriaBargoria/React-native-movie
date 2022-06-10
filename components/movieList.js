@@ -42,7 +42,7 @@ export default ({ onPress, loading, error, data, search }) => {
   if (!data.length)
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Try searching for something...</Text>
+        <Text style={styles.text}>Try searching for destinations...</Text>
       </View>
     );
   return (

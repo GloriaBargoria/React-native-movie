@@ -16,7 +16,7 @@ function SearchTab() {
           component={SearchScreen}
         />
         <Stack.Screen
-          name="Movie"
+          name="Destination"
           component={MovieScreen}
           options={({ route }) => ({ title: route.params.title })}
         />
